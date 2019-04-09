@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../jquery-1.11.1.min.js"></script>
+    <title>Document</title>
+    <style>
+    h2{
+        height: 200px;
+    }
+    </style>
+</head>
+
+<body>
+    <div><a id="hs_myid" href="#a1">asdas</a></div>
+    <div>
+        <p class="hs"></p>
+            <h2>dadad</h2>
+            <h2>dadad</h2>
+            <h2>dadad</h2>
+            <h2>dadad</h2>
+            <h2>dadad</h2>
+            <h2>dadad</h2>
+            <h2>dadad</h2>
+            <h2>dadad</h2>
+            <h2>dadad</h2>
+            <h2>dadad</h2>
+            <h2>dadad</h2>
+            <h2>dadad</h2>
+            <h2>dadad</h2>
+            <h2>dadad</h2>
+            <h2>dadad</h2>
+            <h2>dadad</h2>
+            <h2>dadad</h2>
+            <h2>dadad</h2>
+            <h2>dadad</h2>
+            <h2>dadad</h2>
+            <h2>dadad</h2>
+        <p id="a1" class="hs">1111</p>
+
+            <h2>dadad</h2>
+            <h2>dadad</h2>
+            <h2>dadad</h2>
+            <h2>dadad</h2>
+            <h2>dadad</h2>
+            <h2>dadad</h2>
+            <h2>dadad</h2>
+            <h2>dadad</h2>
+            <h2>dadad</h2>
+            <h2>dadad</h2>
+            <h2>dadad</h2>
+        <p class="hs"></p>
+    </div>
+</body>
+<script>
+    $(function () {
+        $('#hs_myid').click(function () {  
+            /* 1.先获取到  dom元素id是#a1 在文档中的位置 
+                2.通过animate（）来实现跳转动画*/
+            var hs_hight = $($(this).attr("href")).offset().top;
+            $("html, body").animate({  
+                scrollTop: hs_hight + "px"
+            }, 1500); return false;
+        });
+    });
+
+</script>
+
+</html>
