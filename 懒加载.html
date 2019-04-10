@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+    </div>
+    <div><button>加载更多</button></div>
+</body>
+<script src="../jquery-1.11.1.min.js"></script>
+<script>
+var arr=[];
+for (var i = 0; i <108; i++) {
+    arr.push(i)
+}
+/*  */
+var str=""
+    for (var j = 0; j <10; j++) {
+        str+=`<h3>${j}</h3>`
+}
+$("#app").append(str)
+var mn=1;
+var num =10;
+ $("button").on("click",function() {
+     mn++;
+    var arr1=arr.slice(num*(mn-1),num*mn)
+    console.log(arr1);
+    var str1=""
+    for (var k = 0; k < arr1.length; k++) {
+     str1 += `<h3>${arr1[k]}</h3>`;
+    }
+    console.log(str1);
+    $("#app").append(str1)
+    if(arr1.length==0){
+        console.log("没有更多内容啦");
+    }
+ })
+
+</script>
+</html>
