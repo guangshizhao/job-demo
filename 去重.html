@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+var arr=[1,2,3,4,5,6,5,7,5,4,5,6,8,1,2,1,1,2,3,4,5,1,9,10]
+
+// for (let i = 0; i < arr.length; i++) {
+//     if(arr1.indexOf(arr[i])==-1){
+//         arr1.push(arr[i])
+//     }
+// }
+var arr1=arr.sort(function (a,b){
+    return a-b
+});
+for (let i = 0; i < arr1.length; i++) {
+    if(arr1[i]==arr1[i+1]){
+        arr1.splice(i,1)
+        i--;
+    }
+}
+console.log(arr1);
+
+</script>
+</html>
